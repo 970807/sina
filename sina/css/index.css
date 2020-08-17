@@ -1,6 +1,7 @@
 *{
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 a{
 	text-decoration: none;
@@ -14,9 +15,6 @@ input{
 }
 .display-none{
 	display: none!important;
-}
-body{
-	/* font-family: Simsun, "Arial Narrow", HELVETICA !important; */
 }
 .wrap{
 	width: 1000px;
@@ -191,6 +189,7 @@ body{
 .header_nav .weibo:hover~.weiboList,.header_nav .weiboList:hover,.header_nav .blog:hover~.blogList,.header_nav .blogList:hover,.header_nav .mail:hover~.mailList,.header_nav .mailList:hover{
 	display: block;
 }
+
 /* 头部导航-end */
 
 /* 搜索栏-start */
@@ -213,18 +212,21 @@ body{
 	color: #666;
 	margin: 10px 0 0 25px;
 	padding: 5px 0 0 12px;
-	height: 25px;
-	width: 56px;
+	height: 32px;
+	width: 60px;
 	font-size: 15px;
 	cursor: pointer;
 }
 .top_search .search-select span{
 	display: inline-block;
-	height: 25px;
+	height: 23px;
 	cursor: pointer;
 }
 .top_search .search-select .tn-arrow{
-	transform: translate(-5px,-2px);
+	position: absolute;
+	top: 50%;
+	right: 4px;
+	transform: translateY(-50%);
 }
 .top_search .selectList{
 	display: none;
@@ -247,7 +249,8 @@ body{
 }
 .top_search .search-input{
 	width: 277px;
-	height: 28px;
+	height: 32px;
+	border: 1px solid #c1c1c1;
 	margin-top: 10px;
 	padding-left: 6px;
 	color: #666;
@@ -261,8 +264,8 @@ body{
 	z-index: 999;
 	background-color: #FCFCFC;
 	position: absolute;
-	transform: translate(205px,42px);
-	width: 285px;
+	transform: translate(196px,42px);
+	width: 277px;
 }
 .top_search .top-tip>div{
 	padding: 5px 0 5px 10px;
@@ -535,11 +538,13 @@ body{
 .content1 .sina-zc .zc-apply .zc-apply-btn:hover{
 	background-color: #f05a3c;
 }
-
+.content1 .sina-zc .zc-footer {
+	position: absolute;
+	bottom: 9px;
+}
 .content1 .sina-zc .zc-footer>a{
 	color: #666;
-	font-size: 14px;
-	line-height: 26px;
+	font-size: 12px;
 }
 .content1 .sina-zc .zc-footer>a:first-child{
 	margin-right: 40px;
@@ -593,8 +598,10 @@ body{
 	line-height: 32px;
 	text-align: center;
 	border-radius: 4px;
-	margin-top: 13px;
-	margin-left: 14px;
+	position: absolute;
+	bottom: 15px;
+	left: 50%;
+	transform: translateX(-57%);
 }
 .content1 .heimao .heimao-btn:hover{
 	background-color: #FF8400;
@@ -869,13 +876,13 @@ body{
 	display: none;
 	width: 58px;
 	position: absolute;
-	left: 60px;
+	left: 57px;
 }
 .part-1 .active3{
 	display: none;
-	width: 59px;
+	width: 57px;
 	position: absolute;
-	left: 117px;
+	left: 116px;
 }
 .part-1 .col{
 	width: 174px;
