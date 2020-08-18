@@ -1,0 +1,85 @@
+// 导航栏
+@import "color.less";
+@import "mixin.less";
+.main-nav{
+	.color;
+	.relative();
+	font-size: 12px;
+	margin-top: 5px;
+
+	a {
+		color: #000;
+
+		&:hover {
+			color: @orange;
+			text-decoration: underline;
+		}
+	}
+	
+	li {
+		text-align: center;
+		transform: translateX(-10px);
+	}
+
+	div {
+		>ul {
+			display: flex;
+
+			>li {
+				width: 44px;
+				margin: 8px 0;
+
+				&:first-child {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+
+	div {
+		width: 176px;
+		display: inline-block;
+		margin-right: 10px;
+	}
+
+	.nav6 {
+		.size(40px, 96px);
+		.absolute(@t: 0, @r: 0);
+
+		>ul {
+			display: block;
+
+			>li {
+				margin-bottom: 16px;
+				transform: translateX(0);
+
+				&:nth-child(1) {
+					font-weight: 400;
+				}
+
+				&:nth-child(3) {
+					padding-bottom: 13px;
+					margin-left: 6px;
+				}
+			}
+		}
+
+		li {
+			transform: translateX(0);
+		}
+	}
+
+	.more {
+		width: 64px;
+		text-align: center;
+		transform: translate(-151px,-25px);
+		left: 142px;
+
+		li {
+			padding: 0;
+		}
+	}
+}
+.main-nav .nav6>ul>li:nth-child(3):hover~.more,.more:hover{
+	display: block;
+}

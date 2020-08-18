@@ -1,0 +1,157 @@
+// part-1
+@import "color.less";
+@import "mixin.less";
+.part-1{
+	.color;
+	&:extend(.part-content all);
+	margin-left: 15px;
+
+	.order-menu {
+		.size(356px, 36px);
+		.relative();
+		cursor: pointer;
+		color: #000;
+		margin-top: 15px;
+		margin-bottom: 25px;
+		display: flex;
+
+		span {
+			.size(58px, 36px);
+			display: inline-block;
+			font-size: 17px;
+			line-height: 33px;
+			text-align: center;
+
+			&:hover {
+				color: @orange;
+			}
+		}
+	}
+
+	.pic {
+		font-size: 0;
+
+		div {
+			cursor: pointer;
+			border: 1px solid @white;
+			width: 107px;
+			display: inline-block;
+			margin-right: 9px;
+
+			&:hover {
+				border-color: @orange;
+
+				span {
+					color: @orange;
+				}
+			}
+		}
+
+		img {
+			.size(107px, 70px);
+		}
+
+		span {
+			.size(107px, 20px);
+			.height(20px);
+			color: @white;
+			display: block;
+			font-size: 12px;
+			text-align: center;
+			background-color: #000;
+		}
+	}
+
+	.active1 {
+		.absolute();
+		width: 58px;
+	}
+
+	.active2 {
+		.absolute(@l: 57px);
+		display: none;
+		width: 58px;
+	}
+
+	.active3 {
+		.absolute(@l: 116px);
+		display: none;
+		width: 57px;
+	}
+
+	.col {
+		.size(174px, 36px);
+		border: 1px solid @grey;
+		border-left: none;
+	}
+
+	.span_1 {
+		border: 1px solid @grey;
+		border: none;
+	}
+
+	.span_2 {
+		border: 1px solid @grey;
+		border-right: none;
+	}
+
+	.span_3 {
+		border: 1px solid @grey;
+		border-left: none;
+		border-right: none;
+	}
+
+	.part1-bottom {
+		height: 70px;
+		margin-top: 22px;
+	}
+
+	.part-pic {
+		float: left;
+	}
+
+	.part1-bottom {
+		.part-content {
+			float: left;
+			margin-top: -6px;
+			margin-left: 6px;
+		}
+
+		.col {
+			width: 232px;
+		}
+	}
+
+	.part-pic {
+		>div {
+			.relative();
+			cursor: pointer;
+			margin-bottom: 9px;
+		}
+
+		img {
+			.size(105px, 90px);
+		}
+
+		.title {
+			.absolute(@b: 3px);
+			color: @white;
+			background: rgba(0,0,0,.6);
+			width: 105px;
+			font-size: 12px;
+			text-align: center;
+			padding: 3px 0;
+		}
+	}
+
+	.play_ico {
+		.size(27px, 27px);
+		.absolute(@b: 30px; @l: 5px);
+		display: block;
+		background: url(//n.sinaimg.cn/www/index/play_icon_normal.png) no-repeat;
+	}
+
+	.play_ico_hover {
+		background: url(../images/play_icon_hover.png) no-repeat;
+	}
+}

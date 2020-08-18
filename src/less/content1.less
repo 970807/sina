@@ -1,0 +1,432 @@
+// content1
+@import "color.less";
+@import 'mixin.less';
+.content1{
+  .color;
+	.relative();
+	display: flex;
+
+	.product {
+    .size(240px, 222px);
+    .relative();
+    cursor: default;
+    border: 1px solid #d9e0ee;
+		margin-top: 30px;
+		padding-left: 13px;
+		overflow: hidden;
+		z-index: 1;
+
+		.title {
+			&:hover {
+        color: @orange;
+				cursor: pointer;
+			}
+		}
+
+    .mod-prev {
+      &:extend(.mod-arrow);
+      background-position: -146px -553px;
+      margin-left: 96px;
+      
+      &:hover {
+        background-position: -148px -519px;
+      }
+    }
+
+    .mod-next {
+      &:extend(.mod-arrow);
+      background-position: -172px -553px;
+      margin-left: 5px;
+      
+      &:hover {
+        background-position: -123px -519px;
+      }
+    }
+
+    // 新浪众测
+    .sina-zc {
+      &:extend(.content1-size);
+      left: -242px;
+
+      .head-zc {
+        margin-bottom: 9px;
+
+        .title-left {
+          color: @blue;
+          font-size: 16px;
+          font-weight: bold;
+        }
+
+        .title-right {
+          color: @gray;
+          font-size: 12px;
+          display: inline-block;
+          transform: translate(43px,-1px);
+
+          &:hover {
+            color: @blue;
+          }
+        }
+      }
+
+      h5 {
+        margin-bottom: 7px;
+      }
+
+      .title-1 {
+        color: @gray;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: bold;
+
+        &:hover {
+          color: @blue;
+        }
+      }
+
+      .zc-content {
+        padding-bottom: 12px;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        width: 215x;
+
+        img {
+          cursor: pointer;
+	        padding-right: 5px;
+        }
+      }
+
+      .zc-apply {
+        span {
+          color: red;
+        }
+
+        p {
+          margin-bottom: 8px;
+        }
+
+        .zc-apply-btn {
+          .size(84px, 30px);
+          .height(30px);
+          color: @white;
+          display: block;
+          text-align: center;
+          background-color: @blue;
+          font-size: 14px;
+
+          &:hover {
+            background-color: #f05a3c;
+          }
+        }
+      }
+
+      .zc-footer {
+        .absolute(@b: 9px);
+
+        a {
+          color: @gray;
+          font-size: 12px;
+          
+          &:first-child {
+            margin-right: 40px;
+          }
+          &:hover {
+            color: @blue;
+          }
+        }
+      }
+    }
+
+    // 黑猫投诉产品
+    .heimao {
+      &:extend(.content1-size);
+
+      .heimao-title1 {
+        color: @blue;
+        font-weight: bold;
+
+        &:hover {
+          color: @orange;
+        }
+      }
+
+      .heimao-title2 {
+        color: @orange;
+        font-size: 13px;
+      }
+
+      .heimao-p1 {
+        margin-top: 6px;
+
+        a {
+          .height(20px);
+          color: @gray;
+          font-size: 14px;
+          font-weight: bold;
+
+          &:hover {
+            color: @orange;
+          }
+        }
+      }
+
+      .heimao-p2 {
+        border-bottom: 1px dashed #B9B5A8;
+        margin-right: 22px;
+        padding-bottom: 5px;
+
+        a {
+          color: @gray;
+          font-size: 12px;
+          text-decoration: none;
+
+          &:hover {
+            color: @orange;
+          }
+        }
+      }
+
+      .heimao-btn {
+        .absolute(@t: 137px, @l: 50%);
+        .size(180px, 32px);
+        .height(32px);
+        color: @white;
+        background-color: @blue;
+        font-size: 12px;
+        cursor: pointer;
+        display: block;
+        text-align: center;
+        border-radius: 4px;
+        transform: translateX(-57%);
+
+        &:hover {
+          background-color: @orange;
+        }
+      }
+    }
+
+    // 每日一问
+    .item-ask {
+      &:extend(.content1-size);
+      left: 266px;
+
+      .ask-1-left {
+        .size(83px, 26px);
+        .absolute(@l:-15px);
+        display: inline-block;
+        background: url(../images/ask.png);
+        transform: translate(15px,13px);
+      }
+
+      .ask-1-right {
+        .absolute(@r:24px);
+        color: @gray;
+        font-size: 12px;
+        width: 48px;
+        transform: translateY(15px);
+
+        &:hover {
+          color: @orange;
+        }
+      }
+
+      .ask-2-left {
+        .size(96px, 131px);
+        .absolute(44px, 0, 0, 1px);
+        border: 1px solid @white;
+        display: inline-block;
+        
+        img {
+          width: 96px;
+        }
+
+        &:hover {
+          border-color: #e66100;
+        }
+      }
+
+      .ask-2-right {
+        .size(122px, 160px);
+        .absolute(28px, 0, 0, 98px);
+        display: inline-block;
+        background: url(../images/ask.png) no-repeat 0 -27px;
+
+        a {
+          .relative(@t: 38px, @l: 14px);
+          color: @gray;
+          font-size: 13px;
+
+          &:hover {
+            color: @orange;
+          }
+        }
+      }
+
+      .ask-2-question {
+        .absolute(139px, 0, 0, 120px);
+        display: inline-block;
+        width: 100px;
+
+        a {
+          color: @gray;
+          font-size: 12px;
+          width: 48px;
+          display: inline-block;
+          transform: translateY(-10px);
+
+          &:hover {
+            color: @orange;
+	          text-decoration: underline;
+          }
+        }
+
+        .ico-face {
+          .size(7px, 7px);
+          .absolute(1px, 0, 0, 26px);
+          display: inline-block;
+          background: url(../images/ask.png) no-repeat -88px 0;
+        }
+      }
+    }
+
+    // 车型大全
+    .car {
+      &:extend(.content1-size);
+      left: 519px;
+
+      .title-left {
+        color: @blue;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .title-right {
+        .relative(@l: 104px);
+        color: @gray;
+        font-size: 12px;
+
+        &:hover {
+          color: @orange;
+        }
+      }
+
+      .price {
+        p {
+          margin-bottom: 5px;
+        }
+
+        a {
+          color: @blue;
+          font-size: 12px;
+          display: inline-block;
+          width: 52px;
+          font-weight: 500;
+
+          &:hover {
+            color: @orange;
+          }
+        }
+      }
+
+      .car-type {
+        transform: translateY(4px);
+        display: flex;
+
+        .car-ico {
+          .size(42px, 20px);
+          display: block;
+          background: url(../images/auto_bg_01.png) no-repeat;
+        }
+
+        a {
+          margin: 5px 17px 10px 0;
+        }
+
+        .car-ico-1 {
+          background-position: 0 -180px;
+        }
+
+        span {
+          color: @blue;
+          font-size: 12px;
+          display: inline-block;
+          width: 42px;
+          text-align: center;
+        }
+
+        .car-ico-2 {
+          background-position: 0 -200px;
+        }
+
+        .car-ico-3 {
+          background-position: 0 -220px;
+        }
+
+        .car-ico-4 {
+          background-position: 0 -280px;
+        }
+      }
+
+      .btn-compare {
+        transform: translateY(8px);
+
+        a {
+          .size(70px, 29px);
+          .height(29px);
+          color: @white;
+          background-color: @blue;
+          display: inline-block;
+          margin-right: 1px;
+          font-size: 14px;
+          text-align: center;
+        }
+      }
+
+      .car-type-1 {
+        &:hover {
+          .car-ico-1 {
+            background-position: -60px -180px;
+          }
+        }
+      }
+
+      .car-type-2 {
+        &:hover {
+          .car-ico-2 {
+            background-position: -60px -200px;
+          }
+        }
+      }
+
+      .car-type-3 {
+        &:hover {
+          .car-ico-3 {
+            background-position: -60px -220px;
+          }
+        }
+      }
+
+      .car-type-4 {
+        &:hover {
+          .car-ico-4 {
+            background-position: -60px -280px;
+          }
+        }
+      }
+    }
+	}
+
+	.heimaogif {
+    .absolute(@t: 25px, @l: -71px);
+
+		img {
+      .size(70px, 147px);
+		}
+	}
+
+	.product-head {
+		margin-bottom: 12px;
+		border-bottom: 1px solid #e3e6ed;
+		padding: 3px 0;
+	}
+}

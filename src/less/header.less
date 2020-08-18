@@ -1,0 +1,167 @@
+// 头部导航
+@import "color.less";
+@import "mixin.less";
+.header_wrap {
+	.color;
+	.size(100%, 41px);
+	position: fixed;
+	top: 3px;
+	background: @white;
+	z-index: 999;
+
+	.header_nav{
+		font-size: 0;
+		display: flex;
+		justify-content: space-between;
+		margin: auto;
+		width: 1000px;
+
+		>div {
+			>a {
+				.size(80px, 41px);
+				.height(41px);
+				color: #4c4c4c;
+				font-size: 12px;
+				display: inline-block;
+				text-align: center;
+			}
+		}
+
+		a {
+			&:hover {
+				color: @orange;
+			}
+		}
+
+		.loginBox {
+			.size(520px, 271px);
+			.absolute(@l: 550px);
+			background-color: @white;
+			border: 1px solid #ffc525;
+			font-size: 13px;
+			color: rgb(67, 66, 66);
+			display: none;
+			z-index: 999;
+
+			.QRCode {
+				width: 220px;
+				margin-left: 25px;
+				text-align: center;
+			}
+
+			p {
+				margin: 20px 0;
+			}
+
+			.loginForm {
+				.loginClose {
+					.absolute(7px, 0, 0, 489px);
+					color: @gray;
+					font-weight: 700;
+
+					&:hover {
+						color: #3f7bc1;
+					}
+				}
+
+				.login_btn {
+					.size(64px, 29px);
+					.height(29px);
+					color: @white;
+					background: @orange;
+					display: inline-block;
+					text-align: center;
+					font-size: 14px;
+					padding: 1px 0;
+					margin-right: 5px;
+				}
+
+				.inputs {
+					.size(204px, 23px);
+					margin-bottom: 10px;
+					font-size: 12px;
+				}
+
+				input {
+					&:last-child {
+						transform: translateY(2px);
+					}
+				}
+
+				.link1 {
+					color: #a87a2c;
+					display: inline-block;
+					margin-top: 10px;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+
+				.qq_login {
+					color: #000;
+					display: block;
+					margin-top: 20px;
+
+					&::before {
+						content: url(../images/qq.png);
+						.relative(@t: 2px);
+					}
+
+					&:hover {
+						color: @orange;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+
+		.weiboList {
+			width: 80px;
+			left: 860px;
+		}
+
+		.blogList {
+			left: 934px;
+		}
+
+		.mailList {
+			width: 120px;
+			left:1010px;
+		}
+	}
+}
+.navList {
+	.absolute(@l: 322px);
+	cursor: pointer;
+	width: 100px;
+	display: none;
+	background-color: #FCFCFC;
+	z-index: 999;
+
+	li {
+		border: 1px solid #fecc5b;
+		border-top: none;
+		padding-left: 15px;
+
+		&:hover {
+			background-color: #FFF5DA;
+
+			>a {
+				color: #FF8500;
+			}
+		}
+
+		>a {
+			color: #333;
+			font-size: 12px;
+			line-height: 31px;
+		}
+	}
+}
+.header_nav .login:hover~.loginBox,.header_nav .loginBox:hover{
+	display: flex;
+}	
+.header_nav .weibo:hover~.weiboList,.header_nav .weiboList:hover,.header_nav .blog:hover~.blogList,.header_nav .blogList:hover,.header_nav .mail:hover~.mailList,.header_nav .mailList:hover{
+	display: block;
+}

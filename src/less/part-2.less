@@ -1,0 +1,57 @@
+// part-2
+@import "color.less";
+@import "mixin.less";
+.part-2{
+	.color;
+	margin-left: 30px;
+
+	.order-menu {
+		.size(356px, 36px);
+		.relative();
+		cursor: pointer;
+		color: #000;
+		margin-top: 15px;
+		margin-bottom: 18px;
+		display: flex;
+
+		span {
+			.size(58px, 36px);
+			display: inline-block;
+			font-size: 17px;
+			line-height: 33px;
+			text-align: center;
+
+			&:hover {
+				color: @orange;
+			}
+		}
+	}
+
+	.active1 {
+		.absolute();
+		width: 58px;
+	}
+
+	.active2 {
+		.absolute();
+		display: none;
+		width: 100%;
+	}
+
+	.span_2 {
+		.relative();
+		border: 1px solid @grey;
+		border-right: none;
+	}
+
+	.col {
+		.size(240px, 36px);
+		border: 1px solid @grey;
+		border-left: none;
+
+		span {
+			.absolute(@r: 10px);
+			font-size: 12px;
+		}
+	}
+}

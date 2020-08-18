@@ -1,0 +1,45 @@
+@import "mixin.less";
+.mod-arrow {
+  .size(19px, 19px);;
+  .relative(@t: 4px);
+  display: inline-block;
+	background: url(../images/bg2.png) no-repeat;
+  border-radius: 50%;
+	cursor: pointer;
+}
+
+.part-content {
+  margin-top: 8px;
+  font-size: 15px;
+  
+  li {
+    background: url(../images/icon.png) no-repeat 0 -881px;
+    padding-left: 8px;
+    margin-left: 5px;
+    margin-bottom: 6px;
+
+    a {
+      line-height: 24px;
+
+      &:hover {
+        color: #FF8400;
+	      text-decoration: underline;
+      }
+    }
+  }
+
+  .pic-ico {
+    background: url(../images/photoNewsLeft2.gif) no-repeat 0 center;
+	  padding-left: 20px;
+  }
+
+  .video-ico{
+    background: url(../images/videoNewsLeft.gif) 0 50% no-repeat;
+    padding-left: 20px;
+  }
+}
+
+.content1-size {
+  .size(240px, 187px);
+  .absolute();
+}
